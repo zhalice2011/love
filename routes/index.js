@@ -1,6 +1,8 @@
 module.exports = function (app) {
   app.get('/', function (req, res) {
-    res.redirect('/posts');
+    res.status(404).render('404');
+    
+    //res.redirect('/posts');
   });
   app.use('/signup', require('./signup'));
   app.use('/signin', require('./signin'));
