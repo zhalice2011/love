@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 
   PostModel.getPosts(author)
     .then(function (posts) {
-      res.render('posts', {
+      res.render('404', {
         posts: posts
       });
     })
